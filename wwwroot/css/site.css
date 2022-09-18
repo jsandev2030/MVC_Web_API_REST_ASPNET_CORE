@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.estilo_tb {
+    width: 219px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.alinhamento {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.name_color {
+    color: salmon;
+}
+
+.right {
+    text-align: right;
+}
+
+.aviso {
+    color: red;
+}
+
+.clean {
+    text-decoration: none;
+}

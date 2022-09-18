@@ -1,0 +1,47 @@
+﻿@model MVCWatches.Models.Watches
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1 class="alinhamento">Editar Relógio</h1>
+        <hr />
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IDWatch" />
+           <div class="form-group">
+                <input asp-for="Categoria" class="form-control"/>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input asp-for="Marca" class="form-control" />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input asp-for="Valor" class="form-control" />
+            </div><br />
+            <div class="form-group">
+                <input asp-for="Cor" class="form-control" />
+            </div><br />
+            <div class="form-group">
+                <input asp-for="Ano" class="form-control" />
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-warning btn-sm" />
+                <a asp-action="Index" class="btn btn-primary btn-sm">Voltar a listagem</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

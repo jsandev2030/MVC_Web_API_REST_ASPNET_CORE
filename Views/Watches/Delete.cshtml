@@ -1,0 +1,56 @@
+﻿@model MVCWatches.Models.Watches
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">        
+        <div class="alinhamento">
+            <h3>Quer mesmo eliminar<br /> o <b class="name_color">@Html.DisplayFor(model => model.Nome)</b>?</h3>
+            <div class="alert alert-danger" role="alert">
+                <strong>Atenção!</strong> Esta opção será irreversível.
+            </div>
+        </div>
+        <hr />
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Categoria): </th>
+                    <td>@Html.DisplayFor(model => model.Categoria)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Nome):</th>
+                    <td>@Html.DisplayFor(model => model.Nome)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Marca):</th>
+                    <td>@Html.DisplayFor(model => model.Marca)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Valor):</th>
+                    <td>@Html.DisplayFor(model => model.Valor)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Cor):</th>
+                    <td>@Html.DisplayFor(model => model.Cor)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Ano):</th>
+                    <td>@Html.DisplayFor(model => model.Ano)</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div class="alinhamento">
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="IDWatch" />
+                <input type="submit" value="Eliminar" class="btn btn-danger btn-sm" />
+                <a asp-action="Index" class="btn btn-primary btn-sm">Voltar a listagem</a>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>    
+</div>
